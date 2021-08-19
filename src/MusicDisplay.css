@@ -1,0 +1,11 @@
+.music-marque{
+    position: absolute;
+    z-index: 10;
+    width: 32rem;
+    color: white;
+    display: flex;
+    padding: 12px;
+    /* background-color: rgba(0, 12, 12, 0.541); */
+    font-size: 10px;
+    font-style: italic;
+}
