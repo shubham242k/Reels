@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 .logout-button{
     position: fixed;
     bottom: 0rem;
@@ -5,7 +14,13 @@
     background-color: rgb(31, 109, 133);
     border: none;
 }
-
+.upload-button{
+    position: fixed;
+    bottom: 3rem;
+    right: 0rem;
+    background-color: rgb(31, 109, 133);
+    border: none;
+}
 .main-container{
     height: 100vh;
     scroll-snap-type: y mandatory;
@@ -22,4 +37,21 @@
     margin: auto;
     scroll-snap-align: start;
 
+}
+
+.main-body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.content-section{
+    width: 75%;
+    height: 100%;
+}
+
+.user-menu{
+    width: 25%;
+    height: 100%;
+    background-color: #216f90;
 }
