@@ -11,90 +11,13 @@
 .video-section{
     height: 100%;
     width: 32rem;
+    border: 1px solid rgb(230, 220, 220);
     object-fit: cover;
 }
 
-.info-section{
-    height: 100%;
-    width: 21rem;
-    /* background-color: rgb(236, 231, 225); */
-}
-.post-profile{
-    display: flex;
-    align-items: center;
-}
-
-.post-by-name{
-    color: rgb(67, 78, 74);
-    margin-top: 3px;
-    margin-left: 15px;
-}
-
-.line-breaker{
-    height: .5px;
-    width: 100%;
-    background-color: rgb(230, 220, 220);
-}
-
-.comment-section{
-    width: 100%;
-    height: calc(100% - 56px);
-    /* background: azure; */
-    position: relative;
-}
-
-.comment-form{
-    position: absolute;
-    bottom: 0;
-    border-top: 1px solid rgb(230, 220, 220);
-}
-
-.comment-form input{
-    height: 50px;
-    border-radius: 0;
-    
-    border: none;
-    outline: none;
-}
-
-.comment-view{
-    width: 100%;
-    height: calc(100% - 50px);
-    overflow-y: scroll;
-}
-
-
-
-.per-comment{
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    margin: 10px;
-}
-
-.comments-profile-image{
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-}
-
-.name-comment-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    margin: 0px 10px;
-}
-.comments-username{
-    font-size: 11px;
-    font-weight: bold;
-}
-.actual-comment{
-    margin-top: 3px;
-    font-size: 11px;
-    word-wrap: break-word;
-}
 
 .like-button{
+    cursor: pointer;
     width: 31.5rem;
     text-align: end;
     position: absolute;
@@ -105,5 +28,5 @@
 }
 
 .like-button span{
-    color : white;
+    color : rgb(255, 0, 0);
 }

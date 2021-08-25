@@ -1,10 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import {authContext} from "./AuthProvider";
-import { auth, firestore} from "./firebase";
+import {firestore} from "./firebase";
 import {Redirect} from "react-router-dom";
 import "./Home.css"
 import VideoCard from "./VideoCard"
-import UploadButton from "./UploadButton";
+import SideBar from "./SideMenu/SideBar";
+
+export const postContext = createContext();
 let Home = () =>{
     let user = useContext(authContext);
     let [posts,setPosts] = useState([]);
@@ -30,31 +32,28 @@ let Home = () =>{
     },[])
     return(
         <>
-            {user ? "" : <Redirect to="/login" />}
-            
-        <div className ="main-body">
-            <div className = "content-section">
-                <div className ="main-container ">
-                    {
-                        posts.map((element)=>{
-                            return(
-                                <div className = "video-container">
-                                    <VideoCard key = {element.id} data = {element}/>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            
-            </div>
-            <div className = "user-menu">
-                <button className ="btn btn-primary m-4 logout-button" onClick = {()=>{
-                        auth.signOut();
-                    }}>Logout
-                </button>
-                <UploadButton/>
+        {user ? "" : <Redirect to="/login" />}
+        <div className="main-body">
+            <SideBar></SideBar> 
+            <div className ="main-body-reel-section">
+                <div className = "content-section">
+                    <div className ="main-container ">
+                        {
+                            posts.map((element)=>{
+                                return(
+                                    <postContext.Provider value = {element}>
+                                        <div className = "video-container">
+                                            <VideoCard key = {element.id} data = {element}/>
+                                        </div>
+                                    </postContext.Provider>
+                                )
+                            })
+                        }
+                    </div>
                 
+                </div>
             </div>
+            
         </div>
             
         </>

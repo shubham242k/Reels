@@ -38,16 +38,21 @@
     scroll-snap-align: start;
 
 }
-
 .main-body{
     display: flex;
     height: 100vh;
     width: 100vw;
 }
+.main-body-reel-section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
 
 .content-section{
-    width: 75%;
+    width: 100%;
     height: 100%;
+    margin: auto;
 }
 
 .user-menu{
