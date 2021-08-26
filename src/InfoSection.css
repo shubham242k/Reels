@@ -1,3 +1,8 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    
+}
 .delete-comment{
     font-size: 10px;
     cursor: pointer;
@@ -7,6 +12,7 @@
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
+    border-top-right-radius: 20px;
 }
 
 span.time-of-upload{
@@ -28,6 +34,9 @@ span.time-of-upload{
     height: 100%;
     width: 21rem;
     border: 1px solid rgb(230, 220, 220);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: white;
     /* background-color: rgb(236, 231, 225); */
 }
 .post-profile{
@@ -53,12 +62,14 @@ span.time-of-upload{
     height: calc(100% - 56px);
     /* background: azure; */
     position: relative;
+    border-bottom-right-radius: 20px;
 }
 
 .comment-form{
     position: absolute;
     bottom: 0;
     border: 1px solid rgb(230, 220, 220);
+    border-bottom-right-radius: 20px;
 }
 
 .comment-form input{
@@ -67,6 +78,7 @@ span.time-of-upload{
     
     border: none;
     outline: none;
+    border-bottom-right-radius: 20px;
 }
 
 .comment-view{

@@ -21,15 +21,17 @@ const timeDifference = (previous) =>{
     }
 
     else if (elapsed < msPerMonth) {
-        return 'approximately ' + Math.round(elapsed/msPerDay) + ' days ago';   
+        let a = Math.round(elapsed/msPerDay)
+        return  Math.round(elapsed/msPerDay) + ` day${a>1?"s":""} ago`;   
     }
 
     else if (elapsed < msPerYear) {
-        return 'approximately ' + Math.round(elapsed/msPerMonth) + ' months ago';   
+        let a = Math.round(elapsed/msPerMonth)
+        return  Math.round(elapsed/msPerMonth) + ` month${a>1?"s":""} ago`;   
     }
 
     else {
-        return 'approximately ' + Math.round(elapsed/msPerYear ) + ' years ago';   
+        return Math.round(elapsed/msPerYear ) + ' years ago';   
     }
 }
 

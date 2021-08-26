@@ -27,6 +27,7 @@
     border: 1px solid rgb(202, 223, 223);
     background-color: white;
     overflow-y: scroll;
+    
 }
 
 .video-container{
@@ -47,12 +48,14 @@
     display: flex;
     width: 100%;
     height: 100%;
+    
 }
 
 .content-section{
     width: 100%;
     height: 100%;
     margin: auto;
+    
 }
 
 .user-menu{

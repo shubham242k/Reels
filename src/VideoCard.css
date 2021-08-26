@@ -6,6 +6,11 @@
     border: 1px solid rgb(230, 220, 220);
     display: flex;
     position: relative;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
 }
 
 .video-section{
@@ -13,6 +18,8 @@
     width: 32rem;
     border: 1px solid rgb(230, 220, 220);
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 
