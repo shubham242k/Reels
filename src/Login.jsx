@@ -9,7 +9,7 @@ let Login = () =>{
     return(
         <>
             {user ? <Redirect to="/" /> : ""}
-            <button type="button" className="btn btn-primary m-4"
+            <button type="button" className="btn btn-primary login-button"
                 onClick = {
                     ()=>{
                         signInWithGoogle();

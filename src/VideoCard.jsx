@@ -13,14 +13,16 @@ let VideoCard = (props) =>{
                 setVideoState(!videoState);
                 ref.current.play();
             }else{
-                setVideoState(!videoState);
-                ref.current.pause();
+                if(ref.current != null){
+                    setVideoState(!videoState);
+                    ref.current.pause();}
             }
         },{
             root : null,
             rootMargin : "0px",
             threshold:[0.5]
         }); 
+        
         if(ref.current)
             observer.observe(ref.current);
 
